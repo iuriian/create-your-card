@@ -1,0 +1,140 @@
+@mixin generic-style($size: 18px) {
+    color: #ffff;
+    font-size: $size;
+    margin: auto 0px;
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(45deg, #5ef591, #033569);
+}
+
+.container {
+    height: 80%;
+
+    .card-container {
+        position: relative;
+        margin-top: calc(60% - 240px);
+    }
+
+    .card {
+        padding: 70px 24px 24px 24px;
+    }
+
+    .flip-card {
+        height: 240px;
+        width: 100%;
+        position: absolute;
+        z-index: 999;
+    }
+
+    .card-wrapper {
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .front-card,
+    .back-card {
+        border-radius: 8px;
+        height: 240px;
+        width: 100%;
+        background-color: #1c6b74;
+        position: absolute;
+        z-index: 999;
+        bottom: calc(100% - 60px);
+        left: 5px;
+        box-shadow: 0px 0px 16px 4px #043769;
+        backface-visibility: hidden;
+    }
+
+    .front-card {
+        .content {
+            height: calc(100% - 32px);
+            display: flex;
+            flex-flow: row wrap;
+            margin: 16px;
+
+            .img {
+                width: 80%;
+                margin: auto;
+                display: flex;
+            }
+
+            .fullname {
+                @include generic-style;
+
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .back-card {
+        transform: rotateY(180deg);
+
+        .tarja-magnetica {
+            background: #fff;
+            height: 60px;
+            width: 100%;
+            margin-top: 22px;
+        }
+
+        .informations {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: auto auto 12px 16px;
+            height: calc(100% - 94px);
+
+            .label-info {
+                font-size: 10px;
+                color: #fff;
+                opacity: 0.5;
+            }
+
+            .filled-valid-at,
+            .filled-member-since,
+            .filled-cvv {
+                @include generic-style(12px);
+            }
+
+            .group-numbers {
+                display: flex;
+
+                .filled-card-number {
+                    @include generic-style;
+
+                    &:not(:first-child) {
+                        margin-left: 8px;
+                    }
+                }
+            }
+
+            .img {
+                width: 100%;
+            }
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .form-group {
+        .label {
+            font-size: 14px;
+            margin-bottom: 0px;
+        }
+
+        .form-control {
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    }
+}

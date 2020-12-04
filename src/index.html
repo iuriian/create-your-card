@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="./script/index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row h-100 align-items-center justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card-container">
+
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-6">
+                            <div class="flip-card">
+                                <div class="card-wrapper">
+                                    <!-- front-card -->
+                                    <div class="front-card">
+                                        <div class="content">
+                                            <div class="row justify-content-end">
+                                                <div class="col-md-4 align-self-end">
+                                                    <img class="img" src="./img/logo.jpg">
+                                                </div>
+                                                <div class="col-md-8 align-self-end">
+                                                    <p class="fullname">XXXXXXXXXXXXXXXXXX</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- back-card -->
+                                    <div class="back-card">
+                                        <div class="tarja-magnetica"></div>
+                                        <div class="informations">
+                                            <div class="row align-items-end">
+                                                <div class="col-md-4">
+                                                    <small class="label-info">Validade</small>
+                                                    <p class="filled-valid-at">MM/AA</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <small class="label-info">Membro desde</small>
+                                                    <p class="filled-member-since">MM/AA</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <small class="label-info">CVV</small>
+                                                    <p class="filled-cvv">XXX</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8 align-self-end">
+                                                    <small class="label-info">Número do cartão</small>
+                                                    <span class="group-numbers">
+                                                        <p class="filled-card-number">XXXX</p>
+                                                        <p class="filled-card-number">XXXX</p>
+                                                        <p class="filled-card-number">XXXX</p>
+                                                        <p class="filled-card-number">XXXX</p>
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-4 align-self-center">
+                                                    <img src="./img/logo-mastercard-mobile.svg" class="img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-8">
+                                <h2 class="title"></h2>
+
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="fullname" class="label">Nome</label>
+                                        <input type="text" id="fullname" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="card-number" class="label">Número do cartão</label>
+                                        <input type="text" id="card-number" class="form-control">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="cvv" class="label">CVV</label>
+                                                <input type="text" id="cvv" class="form-control" maxlength="3">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="valid-at" class="label">Validade</label>
+                                                <input type="text" id="valid-at" class="form-control" disabled readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="member-at" class="label">Membro desde</label>
+                                                <input type="text" id="member-at" class="form-control" disabled
+                                                    readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
